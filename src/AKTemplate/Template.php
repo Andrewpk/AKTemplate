@@ -5,8 +5,11 @@ namespace AKTemplate;
 use Exception;
 
 /**
+ * Class Template
  * A simple template class for PHP. Allows you to create templates in pure PHP.
  * There are many template systems like it, but this one is simple.
+ * @package AKTemplate
+ * @property array $props
  */
 class Template
 {
@@ -25,6 +28,10 @@ class Template
         $this->_templateDir = $_templateDir;
     }
 
+    /**
+     * Template constructor.
+     * @param string $templateName
+     */
     public function __construct($templateName = '')
     {
         $this->props = array();
@@ -62,21 +69,42 @@ class Template
         return ob_get_clean();
     }
 
+    /**
+     * Allows for setting template properties like this: `$t->propName = 'value';`
+     * @param $k
+     * @param $v
+     * @return void
+     */
     public function __set($k, $v)
     {
         $this->props[$k] = $v;
     }
 
+    /**
+     * Allows for getting template properties like this: `$t->propName`
+     * @param $k
+     * @return mixed
+     */
     public function __get($k)
     {
         return $this->props[$k];
     }
 
+    /**
+     * Allows for checking if a template property is set like this: `isset($t->propName)`
+     * @param $k
+     * @return bool
+     */
     public function __isset($k)
     {
         return isset($this->props[$k]);
     }
 
+    /**
+     * Allows for unsetting a template property like this: `unset($t->propName)`
+     * @param $k
+     * @return void
+     */
     public function __unset($k)
     {
         unset($this->props[$k]);
