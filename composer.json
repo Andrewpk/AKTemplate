@@ -1,0 +1,20 @@
+{
+  "name": "andrewpk/aktemplate",
+  "description": "A super simple php templating library for learning. So simple, you probably can just look at how this code works and do it yourself.",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Andrew Kehrig",
+      "email": "andrew@andrewkehrig.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=8.0"
+  },
+  "autoload": {
+    "psr-4": {"AKTemplate\\": "src/AKTemplate"}
+  }
+}
