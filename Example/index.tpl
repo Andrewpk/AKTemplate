@@ -1,5 +1,3 @@
-<?php /** @noinspection PhpUndefinedVariableInspection */
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

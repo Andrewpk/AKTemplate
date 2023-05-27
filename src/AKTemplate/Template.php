@@ -32,7 +32,7 @@ class Template
      * Template constructor.
      * @param string $templateName
      */
-    public function __construct($templateName = '')
+    public function __construct(string $templateName = '')
     {
         $this->props = array();
         if (!empty($templateName)) {

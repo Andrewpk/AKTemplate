@@ -14,7 +14,7 @@ $superSecretVariable = "This is not visible in the template.";
 
 try {
     ob_start();
-    echo $template->render('index.tpl.php');
+    echo $template->render('index.tpl');
     ob_end_flush();
 } catch (Exception $e) {
     echo $e->getMessage();
